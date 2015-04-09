@@ -23,6 +23,8 @@
 
 		<!-- CSS
 		================================================== -->
+		<!-- sweet alert -->
+			<link rel="stylesheet" type="text/css" href="js/sweet-alert.css">
 		<!-- Fontawesome Icon font -->
         <link rel="stylesheet" href="css/font-awesome.min.css">
 		<!-- Twitter Bootstrap css -->
@@ -268,13 +270,13 @@
 					<!-- contact form -->
 					<div class="col-lg-8 col-md-8 col-sm-7 col-xs-12 wow fadeInDown animated" data-wow-duration="500ms" data-wow-delay="300ms">
 						<div class="contact-form">
-							<form action="contactengine.php" id="contact-form">
+							<form method="post"action="contactengine.php" onsubmit="return validateForm();"name="myForm"id="contact-form">
 								<div class="input-group name-email">
 									<div class="input-field">
 										<input type="text" name="Name" id="Name" placeholder="Name" class="form-control">
 									</div>
 									<div class="input-field">
-										<input type="email" name="Email" id="Email" placeholder="Email" class="form-control">
+										<input type="text" name="Email" id="Email" placeholder="Email" class="form-control">
 									</div>
 								</div>
 								<div class="input-group">
@@ -354,8 +356,6 @@
         <script src="js/jquery.easing.min.js"></script>
 		<!-- jquery easing -->
         <script src="js/wow.min.js"></script>
-        <!-- Notify js -->
-        <script src="js/notify.min.js"></script>
 		<script>
 			var wow = new WOW ({
 				boxClass:     'wow',      // animated element css class (default is wow)
@@ -370,62 +370,40 @@
 		<!-- Custom Functions -->
         <script src="js/custom.js"></script>
 		
-		<script type="text/javascript">
-			$(function(){
-				/* ========================================================================= */
-				/*	Contact Form
-				/* ========================================================================= */
-				
-				$('#contact-form').validate({
-					rules: {
-						name: {
-							required: true,
-							minlength: 2
-						},
-						email: {
-							required: true,
-							email: true
-						},
-						message: {
-							required: true
-						}
-					},
-					messages: {
-						name: {
-							required: "what's your name?",
-							minlength: "your name must consist of at least 2 characters"
-						},
-						email: {
-							required: "we need your email to reply!"
-						},
-						message: {
-							required: "please write something to send the message!",
-							minlength: "write something longer please!"
-						}
-					},
-					//submitHandler: function(form) {
-					//	$(form).ajaxSubmit({
-					//		type:"POST",
-					//		data: $(form).serialize(),
-					//		url:"process.php",
-					//		success: function() {
-					//			$('#contact-form :input').attr('disabled', 'disabled');
-					//			$('#contact-form').fadeTo( "slow", 0.15, function() {
-					//				$(this).find(':input').attr('disabled', 'disabled');
-					//				$(this).find('label').css('cursor','default');
-					//				$('#success').fadeIn();
-					//			});
-					//		},
-					//		error: function() {
-					//			$('#contact-form').fadeTo( "slow", 0.15, function() {
-					//				$('#error').fadeIn();
-					//			});
-					//		}
-					//	});
-					//}
-				});
-			});
-		</script>
+		<script>
+function validateForm() {
+    var x = document.forms["myForm"]["Email"].value;
+    var atpos = x.indexOf("@");
+    var dotpos = x.lastIndexOf(".");
+    if (atpos< 1 || dotpos<atpos+2 || dotpos+2>=x.length) {
+        swal("Error", "Not a valid email address" , "error");
+        return false;
+    }
+    var x = document.forms["myForm"]["Name"].value;
+    if (x == null || x == "") {
+        swal("Error" ,"Your name must be filled out!" , "error");
+        return false;
+    }
+    var x = document.forms["myForm"]["Message"].value;
+    if (x == null || x == "") {
+        swal("Error" ,"Don't you want to leave a message?" , "error");
+        return false;
+    }
+}
+</script>
+	<script src="js/sweet-alert.min.js"></script>
+	<script src="js/notify.min.js"></script>
+<script>
+if(window.location.hash == '#success')
+{
+$.notify("Thank you for your email! We'll be in contact shortly.", "success");
+}
+if(window.location == '#error')
+{
+$.notify("I'm sorry, your email was not sent. Please try again.", "error");
+}
+</script>
+
             <script>
             $(document).ready(function () {
         $(".navbar-nav li.trigger-collapse a").click(function(event) {

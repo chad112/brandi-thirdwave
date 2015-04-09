@@ -5,8 +5,8 @@
   font-family: jokal;
   src: url(/fonts/jokal.otf); }
 @font-face {
-  font-family: gotham-black;
-  src: url(/fonts/gotham-black.ttf); }
+  font-family: nexa-black;
+  src: url(/fonts/nexablack.otf); }
 body {
   background-color: #fff;
   font-family: 'jokal','Open Sans', sans-serif;
@@ -226,7 +226,7 @@ nav {
   top: 50%;
   font-size: 50px;
   font-weight: 800;
-  font-family: 'gotham-black'; }
+  font-family: 'nexa-black'; }
 
 .carousel-caption h2 {
   font-size: 62px;
