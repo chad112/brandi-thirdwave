@@ -130,14 +130,19 @@ body > section,
 
 .navbar-toggle i {
   color: #fff; }
-  @media screen and (max-width: 320px) {
+  @media screen and (max-width: 768px) {
     .navbar-toggle i {
-      margin-top: -30px;
+      margin-top: 0;
+      padding-top: 0;
+      position: relative; } }
+  @media (-webkit-min-device-pixel-ratio: 2) and (max-device-width: 667px) {
+    .navbar-toggle i {
+      margin-top: 0;
       padding-top: 0;
       position: relative; } }
 
 .navbar-toggle {
-  margin-top: -32px;
+  margin-top: 0;
   margin-right: 30px;
   font-size: 15px; }
 
@@ -160,6 +165,14 @@ body > section,
   background-color: #44464c;
   height: 60px;
   margin-top: 30px; }
+  @media screen and (max-width: 768px) {
+    .navbar {
+      padding-top: 0;
+      margin-top: 0; } }
+  @media (-webkit-min-device-pixel-ratio: 2) and (max-device-width: 667px) {
+    .navbar {
+      padding-top: 0;
+      margin-top: 0; } }
 
 .navbar-nav li {
   margin: 20px; }
@@ -170,10 +183,35 @@ body > section,
   width: 125px; }
   @media screen and (max-width: 768px) {
     .logo {
-      margin-left: 20px; } }
+      margin-left: 20px;
+      width: 100px;
+      margin-top: 0;
+      padding-top: 0; } }
+  @media (-webkit-min-device-pixel-ratio: 2) and (max-device-width: 667px) {
+    .logo {
+      margin-left: 20px;
+      width: 100px;
+      margin-top: 0;
+      padding-top: 0; } }
 
 nav {
   margin-top: -40px; }
+  @media screen and (max-width: 768px) {
+    nav {
+      text-align: right;
+      background-color: #44464c;
+      float: right;
+      width: 50%;
+      margin-top: 0px;
+      padding-top: 0; } }
+  @media (-webkit-min-device-pixel-ratio: 2) and (max-device-width: 667px) {
+    nav {
+      text-align: right;
+      background-color: #44464c;
+      float: right;
+      width: 50%;
+      margin-top: 0px;
+      padding-top: 0; } }
 
 /*=========================================
 	Slider
@@ -408,6 +446,27 @@ nav {
 .team-member {
   text-align: center; }
 
+.about-list {
+  font-weight: 400;
+  font-size: 30px;
+  text-align: left;
+  font-family: sans-serif;
+  list-style-type: circle;
+  padding: 20px 40px;
+  line-height: 35px; }
+  @media screen and (max-width: 768px) {
+    .about-list {
+      font-size: 20px;
+      line-height: 25px; } }
+  @media screen and (max-width: 320px) {
+    .about-list {
+      font-size: 15px;
+      line-height: 20px; } }
+  @media (-webkit-min-device-pixel-ratio: 2) and (max-device-width: 667px) {
+    .about-list {
+      font-size: 20px;
+      line-height: 25px; } }
+
 /*=========================================
 	Some fun facts
 ==========================================*/
@@ -471,6 +530,47 @@ nav {
 .contact-address p {
   line-height: 24px; }
 
+.contact-address {
+  display: block; }
+  @media screen and (max-width: 768px) {
+    .contact-address {
+      display: none; } }
+  @media (-webkit-min-device-pixel-ratio: 2) and (max-device-width: 667px) {
+    .contact-address {
+      display: none; } }
+
+.contact-address a {
+  color: #6a737b; }
+
+.contact-small {
+  display: none;
+  text-align: center; }
+  @media screen and (max-width: 768px) {
+    .contact-small {
+      display: block;
+      text-align: center;
+      margin: 10px; } }
+  @media (-webkit-min-device-pixel-ratio: 2) and (max-device-width: 667px) {
+    .contact-small {
+      display: block;
+      text-align: center;
+      margin: 10px; } }
+
+@media screen and (max-width: 768px) {
+  .contact-small p {
+    display: block;
+    text-align: center; } }
+@media (-webkit-min-device-pixel-ratio: 2) and (max-device-width: 667px) {
+  .contact-small p {
+    display: block;
+    text-align: center; } }
+
+.contact-small a {
+  color: #6a737b; }
+
+.contact-small a:hover {
+  color: #c0392b; }
+
 .contact-form h3 {
   color: #062033;
   font-size: 24px;
@@ -506,7 +606,7 @@ label.error {
   text-transform: capitalize; }
 
 .contact-form #form-submit {
-  background-color: none;
+  background-color: transparent;
   border: 0 none;
   color: #000;
   font-size: 16px;

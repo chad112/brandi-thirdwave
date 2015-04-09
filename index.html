@@ -76,7 +76,7 @@
                     <ul id="nav" class="navbar-nav">
                         <li class="current"><a href="#body">Home</a></li>
                         <li><a href="#about">About</a></li>
-												<li><a href="#tutorial">Tutorials</a></li>
+				        <li><a href="#tutorial">Tutorials</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
                 </nav>
@@ -132,7 +132,13 @@
 					</div>
 					
 					<div class="sec-sub-title text-center wow fadeInRight animated" data-wow-duration="500ms">
-						<p>Third wave is the name of a movement of changing coffee from a comoddity to something more special.Third wave is the name of a movement of changing coffee from a comoddity to something more special.Third wave is the name of a movement of changing coffee from a comoddity to something more special.Third wave is the name of a movement of changing coffee from a comoddity to something more special. </p>
+						<p>This coffee shop started with a frustration of coffee not being taken as seriously as it should be. Coffee is a bridge of social experience and incredible taste. The name is representative of a movement from coffee being a commodity to an art, and to a life style. Jimmy is opening up Third Wave Coffee in September of 2015. Here are some things to look forward to; </p>
+                        <ul class="about-list">
+                        <li>Delicious coffee, done the right way</li>
+                        <li>A relaxing atmosphere, with few distractions</li>
+                        <li>Smiling faces passionate about quality</li>
+                        <li>Education on how to pick the perfect coffee for you</li></ul>
+                        <p>Third Wave Coffee is so excited to bring you freshly roasted, in house, coffee with specific emphasis on each step of the coffee experience to make sure you're getting quality every time. Be sure to be checking this website often to make sure you aren't missing out on any pre-opening special offers!</p>
 					</div>
                     
                     
@@ -203,22 +209,22 @@
 						<hr>
 					</div>
 							<div class="col-xs-12">
-						<div class="col-sm-4">
+						<div class="col-md-3 col-sm-6 col-xs-6">
 							<img class="tutorial-img" src="http://placehold.it/500x250">
 						</div>
-						<div class="col-sm-4">
+						<div class="col-md-3 col-sm-6 col-xs-6">
 							<img class="tutorial-img" src="http://placehold.it/500x250">
 						</div>
-						<div class="col-sm-4">
+						<div class="col-md-3 col-sm-6 col-xs-6">
 							<img class="tutorial-img" src="http://placehold.it/500x250">
 						</div>
-						<div class="col-sm-4">
+						<div class="col-md-3 col-sm-6 col-xs-6">
 							<img class="tutorial-img" src="http://placehold.it/500x250">
 						</div>
-						<div class="col-sm-4">
+						<div class="col-md-3 col-sm-6 col-xs-6">
 							<img class="tutorial-img" src="http://placehold.it/500x250">
 						</div>
-						<div class="col-sm-4">
+						<div class="col-md-3 col-sm-6 col-xs-6">
 							<img class="tutorial-img" src="http://placehold.it/500x250">
 						</div>
 							</div>
@@ -252,9 +258,9 @@
 					<div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 wow fadeInLeft animated" data-wow-duration="500ms">
 						<div class="contact-address">
 							<h3>Come see us!</h3>
-							<p>123 Coffee Rd</p>
-							<p>Lynchburg, VA</p>
-							<p>111.111.1111</p>
+							<a target="_tab"href="https://maps.google.com?daddr=123+Coffee+road+Forest+VA+24551"><p>123 Coffee Rd</p>
+                                <p>Lynchburg, VA 24551</p></a>
+                            <p><a href="tel://+14341231234">111.111.1111</a></p>
 						</div>
 					</div>
 					<!-- end contact address -->
@@ -281,6 +287,7 @@
 						</div>
 					</div>
 					<!-- end contact form -->
+                    
 					
 					<!-- footer social links -->
 					<div class="col-lg-1 col-md-1 col-sm-1 col-xs-12 wow fadeInRight animated" data-wow-duration="500ms" data-wow-delay="600ms">
@@ -290,6 +297,9 @@
 							<li><a href="#"><i class="fa fa-facebook fa-2x"></i></a></li>
 						</ul>
 					</div>
+                    <div class="contact-small text-center">
+                        <p><a target="_tab" href="https://maps.google.com?daddr=123+Coffee+road+Forest+VA+24551"> 123 Coffee Rd Lynchburg, VA 24551</a> | <a href="tel://+14341231234">434.123.1234</a></p>
+                        </div>
 					<!-- end footer social links -->
 					
 				</div>
@@ -344,6 +354,8 @@
         <script src="js/jquery.easing.min.js"></script>
 		<!-- jquery easing -->
         <script src="js/wow.min.js"></script>
+        <!-- Notify js -->
+        <script src="js/notify.min.js"></script>
 		<script>
 			var wow = new WOW ({
 				boxClass:     'wow',      // animated element css class (default is wow)
@@ -414,5 +426,11 @@
 				});
 			});
 		</script>
+            <script>
+            $(document).ready(function () {
+        $(".navbar-nav li.trigger-collapse a").click(function(event) {
+          $(".navbar-collapse").collapse('hide');
+        });
+      });</script>
     </body>
 </html>
