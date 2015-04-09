@@ -209,23 +209,23 @@
 						<hr>
 					</div>
 							<div class="col-xs-12">
-						<div class="col-md-3 col-sm-6 col-xs-6">
-							<img class="tutorial-img" src="http://placehold.it/500x250">
+						<div class="col-md-4 col-sm-6 col-xs-6">
+							<iframe class="tutorial-img"src="https://player.vimeo.com/video/15664891" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 						</div>
-						<div class="col-md-3 col-sm-6 col-xs-6">
-							<img class="tutorial-img" src="http://placehold.it/500x250">
+						<div class="col-md-4 col-sm-6 col-xs-6">
+							<iframe class="tutorial-img"src="https://player.vimeo.com/video/15664891" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 						</div>
-						<div class="col-md-3 col-sm-6 col-xs-6">
-							<img class="tutorial-img" src="http://placehold.it/500x250">
+						<div class="col-md-4 col-sm-6 col-xs-6">
+							<iframe class="tutorial-img"src="https://player.vimeo.com/video/15664891" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 						</div>
-						<div class="col-md-3 col-sm-6 col-xs-6">
-							<img class="tutorial-img" src="http://placehold.it/500x250">
+						<div class="col-md-4 col-sm-6 col-xs-6">
+							<iframe class="tutorial-img"src="https://player.vimeo.com/video/15664891" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 						</div>
-						<div class="col-md-3 col-sm-6 col-xs-6">
-							<img class="tutorial-img" src="http://placehold.it/500x250">
+						<div class="col-md-4 col-sm-6 col-xs-6">
+							<iframe class="tutorial-img"src="https://player.vimeo.com/video/15664891" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 						</div>
-						<div class="col-md-3 col-sm-6 col-xs-6">
-							<img class="tutorial-img" src="http://placehold.it/500x250">
+						<div class="col-md-4 col-sm-6 col-xs-6">
+							<iframe class="tutorial-img"src="https://player.vimeo.com/video/15664891" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 						</div>
 							</div>
 					</div>
@@ -268,20 +268,20 @@
 					<!-- contact form -->
 					<div class="col-lg-8 col-md-8 col-sm-7 col-xs-12 wow fadeInDown animated" data-wow-duration="500ms" data-wow-delay="300ms">
 						<div class="contact-form">
-							<form action="#" id="contact-form">
+							<form action="contactengine.php" id="contact-form">
 								<div class="input-group name-email">
 									<div class="input-field">
-										<input type="text" name="name" id="name" placeholder="Name" class="form-control">
+										<input type="text" name="Name" id="Name" placeholder="Name" class="form-control">
 									</div>
 									<div class="input-field">
-										<input type="email" name="email" id="email" placeholder="Email" class="form-control">
+										<input type="email" name="Email" id="Email" placeholder="Email" class="form-control">
 									</div>
 								</div>
 								<div class="input-group">
-									<textarea name="message" id="message" placeholder="Message" class="form-control"></textarea>
+									<textarea name="Message" id="Message" placeholder="Message" class="form-control"></textarea>
 								</div>
 								<div class="input-group">
-									<input type="submit" id="form-submit" class="pull-right" value="Send message">
+									<input type="submit" name="Submit"id="form-submit" class="pull-right" value="Submit">
 								</div>
 							</form>
 						</div>
@@ -403,26 +403,26 @@
 							minlength: "write something longer please!"
 						}
 					},
-					submitHandler: function(form) {
-						$(form).ajaxSubmit({
-							type:"POST",
-							data: $(form).serialize(),
-							url:"process.php",
-							success: function() {
-								$('#contact-form :input').attr('disabled', 'disabled');
-								$('#contact-form').fadeTo( "slow", 0.15, function() {
-									$(this).find(':input').attr('disabled', 'disabled');
-									$(this).find('label').css('cursor','default');
-									$('#success').fadeIn();
-								});
-							},
-							error: function() {
-								$('#contact-form').fadeTo( "slow", 0.15, function() {
-									$('#error').fadeIn();
-								});
-							}
-						});
-					}
+					//submitHandler: function(form) {
+					//	$(form).ajaxSubmit({
+					//		type:"POST",
+					//		data: $(form).serialize(),
+					//		url:"process.php",
+					//		success: function() {
+					//			$('#contact-form :input').attr('disabled', 'disabled');
+					//			$('#contact-form').fadeTo( "slow", 0.15, function() {
+					//				$(this).find(':input').attr('disabled', 'disabled');
+					//				$(this).find('label').css('cursor','default');
+					//				$('#success').fadeIn();
+					//			});
+					//		},
+					//		error: function() {
+					//			$('#contact-form').fadeTo( "slow", 0.15, function() {
+					//				$('#error').fadeIn();
+					//			});
+					//		}
+					//	});
+					//}
 				});
 			});
 		</script>
